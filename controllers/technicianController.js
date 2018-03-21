@@ -9,7 +9,7 @@ module.exports = {
 		.catch(err => res.status(422).json(err))
 	},
 
-	findById: function(res, res) {
+	findById: function(req, res) {
 		 Technician.findById(req.params.id)
 		.then(dbModal => res.json(dbModal))
 		.catch(err => res.status(422).json(err))
@@ -17,8 +17,12 @@ module.exports = {
 
 
 	createTechnician: function(req, res) {
+		 console.log(req.body)
 		 Technician.create(req.body)
-		.then(dbModel => res.json(dbModel))
+		.then(dbModel => {
+			console.log("success")
+			res.json(req.body);
+		})
 		.catch(err => res.status(422).json(err)) 
 	},
 
@@ -29,9 +33,14 @@ module.exports = {
 	},
 
 	deleteTechnician: function (req, res) {
-		 Technician.findById(req.params.id)
-		.then(dbModel => dbModel.remove())
-		.then(dbModel => res.json(dbModel))
-		.catch(err => res.status(422).json(err)) 
+		 Technician.findOneAndRemove(req.params.id)
+		.then(dbModel => {
+			console.log('success');
+			res.send("success");
+		})
+		.catch(err => {
+			console.log(err);
+			res.status(422).json(err)
+		}) 
 	}
 }

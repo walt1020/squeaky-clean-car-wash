@@ -8,7 +8,7 @@ if (mongoose.connection.readyState === 0) {
 var newSchema = new Schema({
   
   'location': { type: String },
-  'time': { type: Date },
+  'time': { type: String },
    'car': {
     make: {type: String},
     model: {type: String},

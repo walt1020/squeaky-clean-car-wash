@@ -11,13 +11,8 @@ router.post("/create", appointmentController.createAppointment);
 
 router.get("/:id", appointmentController.findById)
 	
-router.put("/:id/update", function(req, res) {
-	appointmentController.updateAppointment
-})
+router.put("/:id/update", appointmentController.updateAppointment)
 
-router.delete("/:id/delete", function(req, res){
+router.delete("/:id/delete", appointmentController.deleteAppointment)
 
-	appointmentController.deleteAppointment
-
-})
 module.exports = router;

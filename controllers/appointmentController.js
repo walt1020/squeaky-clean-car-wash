@@ -19,10 +19,11 @@ module.exports = {
 
 	createAppointment: function(req, res) {
 		 Appointment.create(req.body)
-		.then(dbModel => res.json(dbModel))
-		.catch(err => {
-			console.log(err)
+		.then(dbModel => {
+			console.log("success")
+			res.json(req.body);
 		})
+		.catch(err => res.status(422).json(err)) 
 	},
 
 	updateAppointment: function(req, res) {
@@ -32,8 +33,11 @@ module.exports = {
 	},
 
 	deleteAppointment: function (req, res) {
-		 Appointment.findById(req.params.id)
-		.then(dbModel => dbModel.remove())
+		 Appointment.findOneAndRemove(req.params.id)
+		.then(dbModel => {
+			console.log('success');
+			res.send("success");
+		})
 		.then(dbModel => res.json(dbModel))
 		.catch(err => res.status(422).json(err)) 
 	}
