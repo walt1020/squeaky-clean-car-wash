@@ -2,11 +2,14 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "http://[::1]:3001/",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "semantic-ui-css": "^2.3.1",
+    "semantic-ui-react": "^0.79.0"
   },
   "scripts": {
     "start": "react-scripts start",

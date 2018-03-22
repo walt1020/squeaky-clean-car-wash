@@ -6,7 +6,10 @@ module.exports = {
 	findAll: function(req, res) {
 		 Customer.find({})
 		.sort({"lastName": -1})
-		.then(dbModal => res.json(dbModal))
+		.then(dbModal => {
+			console.log(dbModal);
+			res.json(dbModal)
+		})
 		.catch(err => res.status(422).json(err))
 	},
 
