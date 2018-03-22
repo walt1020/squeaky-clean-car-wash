@@ -10,6 +10,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -26,6 +27,23 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDILG-p--jK2mJ6kiQ8mQ_qqd2GmO5huAQ",
+      authDomain: "squeaky-clean-car-wash.firebaseapp.com",
+      databaseURL: "https://squeaky-clean-car-wash.firebaseio.com",
+      projectId: "squeaky-clean-car-wash",
+      storageBucket: "squeaky-clean-car-wash.appspot.com",
+      messagingSenderId: "445984715940"
+    };
+    firebase.initializeApp(config);
+  </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

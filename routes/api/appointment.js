@@ -11,8 +11,8 @@ router.post("/create", appointmentController.createAppointment);
 
 router.get("/:id", appointmentController.findById)
 	
-router.put("/:id/update", appointmentController.updateAppointment)
+router.put("/update/:id", appointmentController.updateAppointment)
 
-router.delete("/:id/delete", appointmentController.deleteAppointment)
+router.delete("/delete/:id", appointmentController.deleteAppointment)
 
 module.exports = router;

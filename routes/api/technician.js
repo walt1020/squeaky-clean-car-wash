@@ -8,8 +8,8 @@ router.post("/create", technicianController.createTechnician);
 
 router.get("/:id", technicianController.findById)
 	
-router.put("/:id/update", technicianController.updateTechnician);
+router.put("/update/:id", technicianController.updateTechnician);
 
-router.delete("/delete", technicianController.deleteTechnician);
+router.delete("/delete/:id", technicianController.deleteTechnician);
 
 module.exports = router;
