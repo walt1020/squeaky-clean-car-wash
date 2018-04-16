@@ -13,7 +13,7 @@ module.exports = {
 		.catch(err => res.status(422).json(err))
 	},
 
-	findById: function(res, res) {
+	findById: function(req, res) {
 		 Customer.findById(req.params.id)
 		.then(dbModal => res.json(dbModal))
 		.catch(err => res.status(422).json(err))
@@ -21,7 +21,6 @@ module.exports = {
 
 
 	createCustomer: function(req, res) {
-		console.log("test");
 		 Customer.create(req.body)
 		.then(dbModel => {
 			console.log("success")
