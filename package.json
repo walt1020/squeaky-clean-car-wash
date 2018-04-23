@@ -1,0 +1,19 @@
+{
+  "name": "squeaky-clean-car-wash",
+  "version": "1.0.0",
+  "description": "Helps you schedule a car wash from anywhere",
+  "main": "index.js",
+  "repository": "https://github.com/walt1020/squeaky-clean-car-wash.git",
+  "author": "Ryan Walters <noblebomba@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.16",
+    "mongoose-model-cli": "^1.4.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  }
+}
