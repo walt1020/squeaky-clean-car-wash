@@ -1,30 +1,39 @@
 {
-  "name": "mern",
+  "name": "squeaky-clean-car-wash",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "Helps you schedule a car wash from anywhere",
+  "repository": "https://github.com/walt1020/squeaky-clean-car-wash.git",
+  "author": "Ryan Walters <noblebomba@gmail.com>",
   "main": "server.js",
+  "engines": {
+    "node": "6.11.4",
+    "npm": "3.10.10"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.16",
+    "mongoose-model-cli": "^1.4.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0"
+  },
   "scripts": {
     "server": "node server.js",
     "client": "cd client && npm run start",
-    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/nodemon\" \"npm run client\"",
+    "start": "./node_modules/.bin/concurrently \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
     "deploy": "yarn build && git add . && git commit -m \"Building for production\" && git push heroku master",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node customerSeed.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^3.5.0",
-    "nodemon": "^1.11.0"
-  },
-  "dependencies": {
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "express": "^4.16.3",
-    "express-session": "^1.15.6",
-    "mongoose": "^5.0.11",
-    "mongoose-model-cli": "^1.4.0",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^3.11.0"
   }
 }
